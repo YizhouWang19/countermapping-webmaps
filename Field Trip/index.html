@@ -35,72 +35,84 @@
   <div id="map"></div>
 	<div class="map-overlay">
 	<div class="map-overlay-inner">
-	<h2>Public and Affordable Housing Flood Risk</h2>
-  <p>In the fall of 2012, New York City was hit with hurricane that left tens of thousands of public housing residents <a href = "https://www1.nyc.gov/site/nycha/about/press/pr-2012/nycha-has-restored-power-to-buildings-affected-by-hurricane-sandy.page">without power for days or even weeks]</a>. New York City Housing Authority public housing developments were affected. <a href="https://furmancenter.org/files/publications/SandysEffectsOnHousingInNYC.pdf">24,000 government-subsidized apartments and 40,000 rent-stabilized apartments were also affected</a>.</p>
+	<h2>Climate Justice for Resiliency - Affordable Housing and Resilience Projects in NYC</h2>
+  <p> With climate change and sea level rise, severe flooding could happen in NYC. Therefore,  NYC government have made<a href = "https://www.nyc.gov/assets/orr/pdf/publications/stormwater-resiliency-plan.pdf">New York City Stormwater Resiliency Plan</a>, <a href = "https://data.cityofnewyork.us/City-Government/NYC-Recovery-Resiliency-Projects-Map-Polygons/fpuh-f5mr">Recovery and Resilience Projects</a> and <a href = "https://www.nyc.gov/site/dep/water/green-infrastructure.page">DEP Green Infrastructure</a> to respond. 
+    However, the coastal area is <a href = "https://journals.sagepub.com/doi/full/10.1111/cico.12283?casa_token=aMhRB2owYLMAAAAA:XyawbUmOrHLqu0wjpKJ792DLsdkP-AzD49h3VuYTy9ibZaIgIo6pDOFtVJHGm23QACVzmYaWrXO1YQ"> gentrifying as climate resilience projects are expensive </a>  and may be lack of access to the low-income communities or a minority communities as <a href = "https://nycdohmh.maps.arcgis.com/apps/instant/lookup/index.html?appid=fc9a0dc8b7564148b4079d294498a3cf">Environmental Justice Areas</a>  in New York. 
+    Affordable Housings and people below proverty line are also more likely to be at flooding risks. During the storm weather by the hurricane in 2012, New York City Housing Authority public housing developments were <a href = "https://www1.nyc.gov/site/nycha/about/press/pr-2012/nycha-has-restored-power-to-buildings-affected-by-hurricane-sandy.page">without power for days or even weeks</a>. 
+    </p>
+    <p> Please look at this map: which areas and who will likely be most affected by flooding? Is the resilience infrastructure distributed with equity? Are the most vulnerable communities protected? 
+      <p>
 
-  <p>With rising sea levels from climate change and the <a href="https://www.nytimes.com/2017/04/18/magazine/when-rising-seas-transform-risk-into-certainty.html">promise</a> of more flooding, which areas and <i>who</i> will likely be most affected? How is affordable housing construction responding to this? </p>
+      <p> Additionally, this map is inspired by Dr. Xu's <a href = "https://github.com/iamwfx/crs_3850_5850_mapping_countermapping/tree/main/Fall_2023"> Mapping and Countermapping</a> class. <p> 
+
+
+
+
   <div id='menu'>
+ 
     <label class='check-container'>
-        Sandy Inundation Zone
-        <input id='floodZones' type='checkbox' name='viz-toggle' checked='checked'>
-      </label>
-
-    <label class='check-container'>
-        NYCHA Buildings
+      New York City Housing Authority Buildings
         <input id='nychaBuildings' type='checkbox' name='viz-toggle' checked='checked'>
     </label>
 
     <label class='check-container'>
-        +300 People Below Poverty Line
+      Affordable Housing
+        <input id='Affordable' type='checkbox' name='viz-toggle' checked='checked'>
+    </label>
+
+    <label class='check-container'>
+      DEP Green Infrastructure
+        <input id='DEP' type='checkbox' name='viz-toggle' checked='unchecked'>
+    </label>
+
+    <label class='check-container'>
+        Blocks with more than 300 People Below Poverty Line
         <input id='povertyLevel' type='checkbox' name='viz-toggle' checked='checked'>
     </label>
+
+    <label class='check-container'>
+      NYC Recovery & Resiliency Projects 
+      <input id='ResilienceProject' type='checkbox' name='viz-toggle' checked='checked'>
+  </label>
+
+  <label class='check-container'>
+    Environmental Justice Area
+    <input id='EJA' type='checkbox' name='viz-toggle' checked='checked'>
+</label>
   
     <label class='check-container'>
         2020 predicted floodplains (1 in 100 year flood)
         <input id='flood1002020' type='checkbox' name='viz-toggle' checked='checked'>
     </label>
 
-    <label class='check-container'>
-        2020 predicted floodplains (1 in 500 year flood)
-        <input id='flood5002020' type='checkbox' name='viz-toggle' checked='checked'>
-    </label>
 
     <label class='check-container'>
       2050 predicted floodplains (1 in 100 year flood)
       <input id='flood1002050' type='checkbox' name='viz-toggle' checked='checked'>
   </label>
 
-  <label class='check-container'>
-      2050 predicted floodplains (1 in 500 year flood)
-      <input id='flood5002050' type='checkbox' name='viz-toggle' checked='checked'>
-  </label>
 
   <label class='check-container'>
     2100 predicted floodplains (1 in 100 year flood)
     <input id='flood1002100' type='checkbox' name='viz-toggle' checked='checked'>
 </label>
 
-<label class='check-container'>
-    2100 predicted floodplains (1 in 500 year flood)
-    <input id='flood5002100' type='checkbox' name='viz-toggle' checked='checked'>
-</label>
+
 
   </div>	
 </div>
 
 	</div>
   <script>
-  // You'll be inserting your JS code to initialize your map here
-  mapboxgl.accessToken = 'pk.eyJ1IjoieWl6aG91d2FuZzE5IiwiYSI6ImNsbjF3anFwcTAybm8ycW5oNmdyd3VhaWcifQ.auQlBSQ76G-1HtO6Ahd1CQ';
-  const map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/iamwfx/cl9519asg003414pl56w7ov95', // replace this with your style URL
-    center: [-73.935242, 40.730610], // The convention for coordinates is  typically [long, lat]
-    zoom: 13,
-    // maxZoom: 22,
-    // minZoom: 12
-  });
-
+ // You'll be inserting your JS code to initialize your map here
+mapboxgl.accessToken = 'pk.eyJ1IjoieWl6aG91d2FuZzE5IiwiYSI6ImNsbjF3anFwcTAybm8ycW5oNmdyd3VhaWcifQ.auQlBSQ76G-1HtO6Ahd1CQ'
+const map = new mapboxgl.Map({
+  container: 'map', 
+  style: 'mapbox://styles/yizhouwang19/cln98oce507ff01qx0ylagtjw' ,
+  center: [-73.935242, 40.730610], 
+  zoom: 12
+});
+  
   map.on('load',function(){
     // Give your layer's source a nickname you'll remember easily.
         map.addSource('censusLayer',{
@@ -108,14 +120,24 @@
       'url': 'mapbox://iamwfx.6nowkujs'
     }); 
 
-        map.addSource('sandyLayer',{
+        map.addSource('Resiliency',{
       'type':'vector',
-      'url': 'mapbox://iamwfx.bpjzmy2b'
+      'url': 'mapbox://yizhouwang19.094tfofq'
     });
 
     map.addSource('nychaLayer',{
       'type':'vector',
       'url': 'mapbox://iamwfx.28ut4nij'
+    });
+
+    map.addSource('AffordableHousing',{
+      'type':'vector',
+      'url': 'mapbox://yizhouwang19.5r9325u8'
+    });
+
+    map.addSource('Greeninfra',{
+      'type':'vector',
+      'url': 'mapbox://yizhouwang19.68mybi8g'
     });
 
     map.addSource('100floodplains2020',{
@@ -132,20 +154,10 @@
       'type':'vector',
       'url': 'mapbox://iamwfx.dxjuiivg'
     });
-  
-    map.addSource('500floodplains2020',{
-      'type':'vector',
-      'url': 'mapbox://iamwfx.05ogder8'
-    });
 
-    map.addSource('500floodplains2050',{
+    map.addSource('EJArea',{
       'type':'vector',
-      'url': 'mapbox://iamwfx.4ydk0450'
-    });
-
-    map.addSource('500floodplains2100',{
-      'type':'vector',
-      'url': 'mapbox://iamwfx.8thgevrt'
+      'url': 'mapbox://yizhouwang19.1w33oh7x'
     });
 
     // add a new layer with your polygons
@@ -179,13 +191,37 @@
     });
 
     map.addLayer({
-      'id':'floodZones',
-      'type':'fill',
-      'source':'sandyLayer',
-      'source-layer':'Sandy_Inundation_Zone-4qcajo',
+      'id':'Affordable',
+      'type':'circle',
+      'source':'AffordableHousing',
+      'source-layer':'Affordable_Housing_Production-a0scq1',
       'paint':{
-        'fill-color':'#00158f',
-        'fill-opacity': 0.2
+        'circle-radius': 2,
+                'circle-color': '#ebb30c'
+      }
+    });
+
+    map.addLayer({
+      'id':'DEP',
+      'type':'circle',
+      'source':'Greeninfra',
+      'source-layer':'DEP_Green_Infrastructure-9lj1jz',
+      'paint':{
+        'circle-radius': 2,
+                'circle-color': '#7cbf63'
+      }
+    });
+
+
+
+    map.addLayer({
+      'id':'ResilienceProject',
+      'type':'fill',
+      'source':'Resiliency',
+      'source-layer':'NYC_Recovery__Resiliency_Proj-2z4nh6',
+      'paint':{
+        'fill-color':'#42444f',
+        'fill-opacity': 0.5
       }
     });
 
@@ -195,7 +231,7 @@
       'source':'100floodplains2020',
       'source-layer':'FutureFloodplains_2020_100yr-du18hr',
       'paint':{
-        'fill-color':'#3727c4',
+        'fill-color':'#f720de',
         'fill-opacity': 0.2
       }
     });
@@ -206,7 +242,7 @@
       'source':'100floodplains2050',
       'source-layer':'FutureFloodplains_2050_100yr-6nepei',
       'paint':{
-        'fill-color':'#DF711B',
+        'fill-color':'#db3d97',
         'fill-opacity': 0.2
       }
     });
@@ -218,54 +254,40 @@
       'source':'100floodplains2100',
       'source-layer':'FutureFloodplains_2100_100yr-cqwfrw',
       'paint':{
-        'fill-color':'#2eab81',
-        'fill-opacity': 0.4
-      }
-    });
-
-    map.addLayer({
-      'id':'flood5002020',
-      'type':'fill',
-      'source':'500floodplains2020',
-      'source-layer':'FutureFloodplains_2020_500yr-0x77x0',
-      'paint':{
-        'fill-color':'#f720de',
-        'fill-opacity': 0.2
-      }
-    });
-
-    map.addLayer({
-      'id':'flood5002050',
-      'type':'fill',
-      'source':'500floodplains2050',
-      'source-layer':'FutureFloodplains_2050_500yr-a4444h',
-      'paint':{
-        'fill-color':'#db3d97',
-        'fill-opacity': 0.2
-      }
-    });
-
-    
-    map.addLayer({
-      'id':'flood5002100',
-      'type':'fill',
-      'source':'500floodplains2100',
-      'source-layer':'FutureFloodplains_2100_500yr-27ghpw',
-      'paint':{
         'fill-color':'#22598F',
         'fill-opacity': 0.4
       }
     });
 
-map.setLayoutProperty('floodZones',"visibility", "visible");
+    map.addLayer({
+      'id':'EJA',
+      'type':'fill',
+      'source':'EJArea',
+      'source-layer':'Environmental_Justice_Area_Ce-3h3z3b',
+      'paint':{
+        'fill-color': [
+      'match',
+      ['get', 'ejdesignat'],
+      'EJ Area', '#d9b825',      // Set color for "EJ Area"
+      'Not EJ Area', 'transparent',  // Set color for "Not EJ Area"
+      'Potential EJ Area', '#ebd77f',  // Set color for "Potential EJ Area"
+      /* Default color if no match */ '#AAAAAA'
+    ],
+        'fill-opacity': 0.4
+      }
+    });
+
+
+map.setLayoutProperty('ResilienceProject',"visibility", "visible");
 map.setLayoutProperty('povertyLevel',"visibility", "visible");
 map.setLayoutProperty('nychaBuildings',"visibility", "visible");
+map.setLayoutProperty('Affordable',"visibility", "visible");
+map.setLayoutProperty('DEP',"visibility", "visible");
+map.setLayoutProperty('EJA',"visibility", "visible");
 map.setLayoutProperty('flood1002020',"visibility", "visible");
 map.setLayoutProperty('flood1002050',"visibility", "visible");
 map.setLayoutProperty('flood1002100',"visibility", "visible");
-map.setLayoutProperty('flood5002020',"visibility", "visible");
-map.setLayoutProperty('flood5002050',"visibility", "visible");
-map.setLayoutProperty('flood5002100',"visibility", "visible");
+
 
 var layerList = document.getElementById("menu");
 var checkboxes = layerList.getElementsByTagName("input");
