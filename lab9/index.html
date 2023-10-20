@@ -47,25 +47,25 @@
               <input id='AffHousing' type='checkbox' name='viz-toggle' checked='checked'>
           </label>
           <label class='check-container'>Co-Op
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="coop" style='background:#98D8CE;width: 14px;' ></span>
           </label>
           <label class='check-container'>Shelter
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="homeless" style='background:#E6D97B;width: 14px;'></span>
           </label>
           <label class='check-container'>HPD subsized
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="hpd_sub" style='background:#E086D3;width: 14px;'></span>
           </label>
           <label class='check-container'>Mobile Home
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="mon_home" style='background:#ED8268;width: 14px;'></span>
           </label>
           <label class='check-container'>Public Housing
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="pub_hou" style='background:#8332AC;width: 14px;'></span>
           </label>
           <label class='check-container'>Single-Residency Housing
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="sro" style='background:#462749;width: 14px;'></span>
           </label>
           <label class='check-container'>Other
-              <span class="legend-key" style='background:#CCC'></span>
+              <span class="" style='background:#CCC'></span>
           </label>
 
       <br>
@@ -122,7 +122,7 @@
   mapboxgl.accessToken = 'pk.eyJ1IjoieWl6aG91d2FuZzE5IiwiYSI6ImNsbjF3anFwcTAybm8ycW5oNmdyd3VhaWcifQ.auQlBSQ76G-1HtO6Ahd1CQ';
   const map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/iamwfx/cl9519asg003414pl56w7ov95', // replace this with your style URL
+    style: 'mapbox://styles/yizhouwang19/cln98oce507ff01qx0ylagtjw', // replace this with your style URL
     center: [-73.935242, 40.730610], // The convention for coordinates is  typically [long, lat]
     zoom: 13,
     // maxZoom: 22,
@@ -130,6 +130,43 @@
   });
 
     map.on('load',function(){
+      const popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+      });
+
+      map.on('mouseenter','AffHousing',function(e){
+        const coordinates = e.features[0].geometry.coordinates.slice();
+          // Here's that function that does the transformation
+  function emptyToYesNo(val){
+    if (val.length > 1){
+	return "Yes"} else {return "No"};
+  }
+  const Address = e.features[0].properties.Address;
+  const BBL = e.features[0].properties.BBL;
+  const Council = e.features[0].properties.Council;
+  const P_2050_1 =emptyToYesNo(e.features[0].properties.P_2050_1); // We apply this function to our value.
+    const P_2050_5 = emptyToYesNo(e.features[0].properties.P_2050_5); // Fill in the missing variables
+    const P_2100_1 = emptyToYesNo(e.features[0].properties.P_2100_1); // Fill in the missing variables
+    const P_2100_5 = emptyToYesNo(e.features[0].properties.P_2100_5); // Fill in the missing variables
+
+  
+  /// THERE ARE THREE MORE VARIABLES MISSING!
+  /// FILL IN THE REST
+  var description = '<h4> ' +Address+'<br>'+
+                    'BBL: '+BBL+'<br>'+
+                    'City Council District: '+Council+ '</h4>'+
+                    '<p> In 2050 1 in 100yr Floodplain?: '+ P_2050_1 + '<br>' + 'In 2050 1 in 500yr Floodplain?: '+P_2050_5 +'<br>'+
+                    'In 2100 1 in 100yr Floodplain?: '+P_2100_1 +'<br>'+
+                    'In 2100 1 in 500yr Floodplain?: '+P_2100_5 +'</p>'
+                    popup.setLngLat(coordinates[0][0]).setHTML(description).addTo(map);
+      });
+
+map.on('mouseleave', 'affHousing', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
       // Give your layer's source a nickname you'll remember easily.
       map.addSource('sandyLayer',{
         'type':'vector',
@@ -287,13 +324,24 @@
       });
 
       map.addLayer({
-        'id':'Affhousing',
-        'type':'fill',
+        'id':'AffHousing',
+        'type':'line',
         'source':'Affordablehousing',
         'source-layer':'PLUTO_HOUS_TYPE_MASTER_Featu-7b5u7f',
         'paint':{
-          'fill-color':'#00158f',
-          'fill-opacity': 0.3
+          'line-color': [
+      'match',
+      ['get', 'hous_type'], // Property to match
+      'coop', '#98D8CE',    // If house_type is 'Type1', use this color
+      'homeless', '#E6D97B',    // If house_type is 'Type2', use this color
+      'hpd_sub', '#F2D1C9',    // If house_type is 'Type3', use this color
+      'mob_home', '#E086D3',    // If house_type is 'Type1', use this color
+      'pub_hou', '#8332AC',    // If house_type is 'Type2', use this color
+      'sro', '#462749',    // If house_type is 'Type3', use this color
+      '#CCCCCC'               // Fallback color
+    ],
+          'line-opacity': 1,
+          'line-width':['interpolate',['linear'],['zoom'], 13, 2, 18, 10] 
         }
       });
  
@@ -310,7 +358,7 @@
     map.setLayoutProperty('f80_100',"visibility", "visible");
     map.setLayoutProperty('f80_500',"visibility", "visible");
 
-    map.setLayoutProperty('affHousing',"visibility", "visible");
+    map.setLayoutProperty('AffHousing',"visibility", "visible");
 
     var layerList = document.getElementById("menu");
     var checkboxes = layerList.getElementsByTagName("input");
