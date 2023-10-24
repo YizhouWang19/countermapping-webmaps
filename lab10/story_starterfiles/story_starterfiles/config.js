@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/yizhouwang19/cln98oce507ff01qx0ylagtjw',
+    style: 'mapbox://styles/yizhouwang19/clo316rct000w01qvhjt33b3s',
     accessToken: 'pk.eyJ1IjoieWl6aG91d2FuZzE5IiwiYSI6ImNsbjF3anFwcTAybm8ycW5oNmdyd3VhaWcifQ.auQlBSQ76G-1HtO6Ahd1CQ',
     showMarkers: true,
     markerColor: '#3FB1CE',
