@@ -8,22 +8,21 @@ var config = {
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: true,
     theme: 'dark',
-    use3dTerrain: false, //set true for enabling 3D maps.
-    title: 'The Title Text of this Story',
-    subtitle: 'A descriptive and interesting subtitle to draw in the reader',
-    byline: 'By a Digital Storyteller',
+    use3dTerrain: true, //set true for enabling 3D maps.
+    title: 'Public and Affordable Housing Flood Risk',
+    subtitle: 'Who is affected by flooding in New York City?',
+    byline: 'By Yizhou Wang',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'slug-style-id',
             alignment: 'left',
             hidden: false,
-            title: 'Display Title',
-            image: 'images/source.png',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            title: 'Flooding risk in New York',
+            description: 'With climate change and sea level rise, severe flooding could happen in NYC. Therefore, NYC government have madeNew York City Stormwater Resiliency Plan, Recovery and Resilience Projects and DEP Green Infrastructure to respond. However, the coastal area is gentrifying as climate resilience projects are expensive and may be lack of access to the low-income communities or a minority communities as Environmental Justice Areas in New York. Affordable Housings and people below proverty line are also more likely to be at flooding risks. During the storm weather by the hurricane in 2012, New York City Housing Authority public housing developments were without power for days or even weeks.',
             location: {
-                center: [-122.418398, 37.759483],
-                zoom: 8.5,
+                center: [-73.98082, 40.74661],
+                zoom: 12,
                 pitch: 60,
                 bearing: 0
             },
@@ -31,17 +30,16 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                {
+                 layer: 'pluto-hous-type-master-featu-7b5u7f',
+                  opacity: 0,
+                 }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                {
+                     layer: 'pluto-hous-type-master-featu-7b5u7f',
+                     opacity: 1,
+                }
             ]
         },
         {
@@ -49,63 +47,25 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Second Title',
-            image: 'images/source.png',
-            description: 'Copy these sections to add to your story.',
+            image: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab10/story_starterfiles/story_starterfiles/images/redhook.png',
+            description: 'In the fall of 2012, New York City was hit with a hurricane that left tens of thousands of public housing residents without power for days or even weeks. When Hurricane Sandy struck, the Red Hook Houses were inundated with 6 feet (1.8 m) of floodwater through sewer overflow and high tides. The storm left residents without power and fresh water for months. This caused leaks, resulting in mold that hurt the health of residents.',
             location: {
-                center: [-77.020636, 38.886900],
-                zoom: 8.5,
+                center: [-74.004608, 40.675838],
+                zoom: 16,
                 pitch: 60,
                 bearing: -43.2,
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'pluto-hous-type-master-featu-7b5u7f',
+                    opacity: 1,
+                }
+            ],
             onChapterExit: []
         },
-        {
-            id: 'third-identifier',
-            alignment: 'left',
-            hidden: false,
-            title: 'Third Title',
-            image: 'images/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [6.15116, 46.20595],
-                zoom: 12.52,
-                pitch: 8.01,
-                bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'fourth-chapter',
-            alignment: 'fully',
-            hidden: false,
-            title: 'Third Title',
-            image: 'images/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [-58.54195, -34.71600],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        }
+        
     ]
 };
