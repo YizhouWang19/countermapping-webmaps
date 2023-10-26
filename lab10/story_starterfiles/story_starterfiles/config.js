@@ -13,6 +13,8 @@ var config = {
     subtitle: 'Who is affected by flooding in New York City?',
     byline: 'By Yizhou Wang',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+
+
     chapters: [
         {
             id: 'slug-style-id',
@@ -46,12 +48,12 @@ var config = {
             id: 'second-identifier',
             alignment: 'right',
             hidden: false,
-            title: 'Second Title',
+            title: 'Public Housing in flooding',
             image: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab10/story_starterfiles/story_starterfiles/images/redhook.png',
             description: 'In the fall of 2012, New York City was hit with a hurricane that left tens of thousands of public housing residents without power for days or even weeks. When Hurricane Sandy struck, the Red Hook Houses were inundated with 6 feet (1.8 m) of floodwater through sewer overflow and high tides. The storm left residents without power and fresh water for months. This caused leaks, resulting in mold that hurt the health of residents.',
             location: {
                 center: [-74.004608, 40.675838],
-                zoom: 16,
+                zoom: 16.5,
                 pitch: 60,
                 bearing: -43.2,
             },
