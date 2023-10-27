@@ -49,7 +49,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Public Housing in flooding',
-            image: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab10/story_starterfiles/story_starterfiles/images/redhook.png',
+            image: 'images/redhook.png',
             description: 'In the fall of 2012, New York City was hit with a hurricane that left tens of thousands of public housing residents without power for days or even weeks. When Hurricane Sandy struck, the Red Hook Houses were inundated with 6 feet (1.8 m) of floodwater through sewer overflow and high tides. The storm left residents without power and fresh water for months. This caused leaks, resulting in mold that hurt the health of residents.',
             location: {
                 center: [-74.004608, 40.675838],
