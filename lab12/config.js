@@ -22,7 +22,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Flooding Risks in New York',
-            image: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab12/images/newyorkflooding.png',
+            image: 'images/newyorkflooding.png',
             description: 'In the fall of 2012, New York City was hit with hurricane that left tens of thousands of public housing residents without power for days or even weeks]. New York City Housing Authority public housing developments were affected. 24,000 government-subsidized apartments and 40,000 rent-stabilized apartments were also affected.',
             location: {
                 center: [-73.98082, 40.74661],
@@ -51,7 +51,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Public Housing in flooding',
-            image: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab12/images/redhook.png',
+            image: 'images/redhook.png',
             description: 'In the fall of 2012, New York City was hit with a hurricane that left tens of thousands of public housing residents without power for days or even weeks.',
             location: {
                 center: [-73.97600, 40.71906],
@@ -77,7 +77,7 @@ var config = {
     alignment: 'center',
     hidden: false,
     description: ' When Hurricane Sandy struck, the Red Hook Houses, a public housing development in Brooklyn, were inundated with 6 feet (1.8 m) of floodwater due to sewer overflow and high tides. The storm left residents without power and access to fresh water for months, making daily life extremely challenging. This prolonged exposure to the elements and lack of essential services caused structural damage to the buildings and severe health issues among the residents. The persistent moisture led to mold infestations within many apartments, exacerbating respiratory problems and allergies. This stark example underscores the pressing need to address vulnerabilities in housing and infrastructure across New York City to prevent such dire consequences in the face of future climate-related disasters. Comprehensive risk assessment, investment in resilient infrastructure, and community-centered solutions are vital to ensuring the well-being and resilience of residents living in flood-prone areas.',
-    video:'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab12/images/902-1_902-2364-PD2_preview.mp4',
+    video:'images/902-1_902-2364-PD2_preview.mp4',
     location: {
       center: [-73.97615, 40.71901],
       zoom: 14.84,
@@ -94,7 +94,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Who might be the victim?',
-            image: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab12/images/victim.png',
+            image: 'images/victim.png',
             description: 'With rising sea levels from climate change and the promise of more flooding, which areas and who will likely be most affected? How is affordable housing construction responding to this?',
             location: {
               center: [-73.97615, 40.71901],
