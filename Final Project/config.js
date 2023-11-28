@@ -1,5 +1,5 @@
 var config = {
-    style:  'mapbox://styles/iamwfx/cjjx6bl926vgt2ss0l9dbpmxz',
+    style:  'mapbox://styles/yizhouwang19/clph2yrnk008s01p81gqo3it0',
     accessToken: 'pk.eyJ1IjoieWl6aG91d2FuZzE5IiwiYSI6ImNsbjF3anFwcTAybm8ycW5oNmdyd3VhaWcifQ.auQlBSQ76G-1HtO6Ahd1CQ',
     showMarkers: true,
     markerColor: '#3FB1CE',
@@ -12,7 +12,7 @@ var config = {
     title: ' How do Construction of Parks Contribute to the Green Gentrification of New York City?',
     subtitle: 'CRP5850 Mapping and Countermapping -\n Yizhou Wang',
     byline: 'A Tale of Two Cities \n New York Governor Mario Cuomo on July 16, 1984',
-    para1: 'A shining city is perhaps all the President sees from the portico of the White House and the veranda of his ranch, where everyone seems to be doing well. But there is another city; there is another part to the shining the city; the part where some people can not pay their mortgages, and most young people can not afford one; where students can not afford the education they need, and middle-class parents watch the dreams they hold for their children evaporate. In this part of the city there are more poor than ever, more families in trouble, more and more people who need help but can not find it. Even worse: There are elderly people who tremble in the basements of the houses there. And there are people who sleep in the city streets, in the gutter, where the glitter does not show. There are ghettos where thousands of young people, without a job or an education, give their lives away to drug dealers every day.',
+    para1: '"A shining city is perhaps all the President sees from the portico of the White House and the veranda of his ranch, where everyone seems to be doing well. But there is another city; there is another part to the shining the city; the part where some people can not pay their mortgages, and most young people can not afford one; where students can not afford the education they need, and middle-class parents watch the dreams they hold for their children evaporate. In this part of the city there are more poor than ever, more families in trouble, more and more people who need help but can not find it. Even worse: There are elderly people who tremble in the basements of the houses there. And there are people who sleep in the city streets, in the gutter, where the glitter does not show. There are ghettos where thousands of young people, without a job or an education, give their lives away to drug dealers every day."',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     video: 'D:/WYZ/Documents/GitHub/countermapping-webmaps/lab12/images/902-1_902-2364-PD2_preview.mp4',
     chapters: [
@@ -53,7 +53,7 @@ var config = {
             description: 'Jamaica, Queens:  The average home value is $624,665.   <br>   <br>  In the Jamaican community, the lack of green infrastructure and parks can be life-threatening during the hot weather, as the streets in these areas tend to absorb heat. ',
             location: {
                 center: [ -73.79934038572192,40.703726182054915,],
-                zoom: 14,
+                zoom: 15,
                 pitch: 60,
                 bearing: 40,
                 // flyTo additional controls-
@@ -64,7 +64,7 @@ var config = {
                 //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
+            rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
@@ -79,7 +79,7 @@ var config = {
             description: 'Jamaica Estates:  The average home value is $1,030,645 <br>   <br>  However, in the nearby Jamaica Estates, sidewalks are lined with grass and trees, and the community is adjacent to Cunningham Park, a large public park. At the same time, it is worth noting that the housing prices in this area are approximately double those in the Jamaica community. ',
             location: {
                 center: [ -73.78433300722565, 40.718007262974616,],
-                zoom: 14,
+                zoom: 15,
                 pitch: 60,
                 bearing: 40,
                 // flyTo additional controls-
@@ -90,7 +90,7 @@ var config = {
                 //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
+            rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
@@ -121,7 +121,7 @@ var config = {
     image: 'images/hl1.png',
     description: 'The High Line Park in New York City is a perfect example of this phenomenon. The park is an elevated pedestrian walkway renovated from an abandoned railway in the Chelsea community on the west side of Manhattan, which was fully opened in 2012. Since then, housing prices in nearby communities have continued to rise. The significant increase in property value caused by the Line Park confirms the unfair impact of the approach of the main road. This reinforces the standardized model, in which only the wealthy can afford green space, while the poor continue to be displaced and bear the burden of environmental issues after the achievements of new green space initiatives (Black & Richards, 2020).',
     location: {
-      center: [-73.97615, 40.71901],
+      center: [ -74.00789772295822, 40.74868335083749],
       zoom: 15.84,
       pitch: 56,
       bearing: 260.44,
@@ -149,10 +149,10 @@ var config = {
             image: 'images/hl2.png',
             description: 'The significant increase in real estate value caused by the high line confirms the impact of parks on real estate prices. The increase in value of houses within 80 meters of the park after 1000 days of establishment is much higher than those within 80-800 meters of the park. This gentrification will lead to only the wealthy being able to afford green spaces after the establishment of parks, while the poor continue to be displaced and bear the burden of environmental issues (Black&Richards, 2020).',
             location: {
-              center: [-73.97615, 40.71901],
-              zoom: 15.84,
+              center: [-74.00423584430823, 40.749804736880755],
+              zoom: 17,
               pitch: 56,
-              bearing: 260.44,
+              bearing: 0,
               speed: .5, // make the flying slow
               curve: 1, // change the speed at which it zooms out
             },
@@ -174,10 +174,10 @@ var config = {
             hidden: false,
             title: 'Case Study II: Bush Terminal Park in Sunset Park',
             image: 'images/ssp1.png',
-            description: 'In the past two decades, Sunset Park in Brooklyn pushed for the New York City government to clean up its waterfront, resulting in new green facilities. This includes a new waterfront promenade and newly planted trees. Despite successfully preventing a toxic gas power plant in their backyard, these improvements increased housing and living costs, forcing some low-income residents to relocate. This unintentionally forced the community to choose between affordable housing and a breathable environment. Now, some members are compelled to leave.',
+            description: 'In the past two decades, Sunset Park in Brooklyn pushed for the New York City government to clean up its waterfront, resulting in new green facilities. This includes a new park - the Bush Terminal Park, a waterfront promenade and newly planted trees. Despite successfully preventing a toxic gas power plant in their backyard, these improvements increased housing and living costs, forcing some low-income residents to relocate. This unintentionally forced the community to choose between affordable housing and a breathable environment. Now, some members are compelled to leave.',
             location: {
                 center: [-74.006, 40.7128],
-                zoom: 13,
+                zoom: 14,
                 pitch: 45,
                 bearing: -20
             },
@@ -196,8 +196,8 @@ var config = {
             image: 'images/ssp2.png',
             description: 'Sunset Park &rsquo;s story is becoming a common narrative citywide. Historically, low-income communities have had fewer opportunities for quality green spaces compared to high-income areas. To address this, NYC prioritizes increasing green space access in low-income regions, supported by scientific evidence showing the positive impact of green areas on health and well-being. However, uncontrolled efforts to enhance green spaces in low-income areas may lead to "green gentrification," a process witnessed in Sunset Park. To counter this, some communities and scholars advocate for a "just green enough" approach, though it may not be the ideal model to combat NYC &rsquo; s green gentrification.',
             location: {
-                center: [-74.006, 40.7128],
-                zoom: 13,
+                center: [ -74.02015596386975,40.65356564960238],
+                zoom: 15,
                 pitch: 45,
                 bearing: -20
             },
@@ -208,6 +208,25 @@ var config = {
             onChapterExit: []
         }, 
 
+        {
+            id: 'fourth-chapter3',
+            alignment: 'left',
+            hidden: false,
+            title: 'Case Study II: Bush Terminal Park in Sunset Park',
+            description: 'This is a comparison of housing price change of the waterfront communities with new waterfront green ways and parks from 2012 to 2017 in Brooklyn represented by Sunset Park and similar communities in Brooklyn. The waterfront communities has experienced a much larger housing price change than inner Brooklyn communities.',
+            location: {
+                center: [ -74.02015596386975,40.65356564960238],
+                zoom: 12,
+                pitch: 20,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        }, 
+
+
         
         {
             id: 'fifth-chapter',
@@ -216,7 +235,7 @@ var config = {
             title: 'Conclusion: Strategies for a More Inclusive Park Establishment and Green Growth',
             description: 'New York planners face the crucial challenge of enhancing living standards without perpetuating social injustice through green gentrification. Proposed strategies include a two-stage approach. In Stage One, fostering community engagement is vital, with city authorities collaborating closely with locals to comprehend needs and concerns. Simultaneously, green spaces should be constructed based on traditional standards derived from community input. Moving to Stage Two, protective measures for housing must be implemented, stabilizing the affordable housing market amid green projects. Tailored policies in this phase cater to the unique needs of each community. An integrated approach emphasizes ongoing community involvement and active participation in green space development to counter gentrification, ensuring a healthy, affordable living environment for low-income residents. <br>   <br>   Reference:',
             location: {
-                center: [-74.006, 40.7128],
+                center: [-74.02015596386975,40.65356564960238],
                 zoom: 13,
                 pitch: 45,
                 bearing: -20

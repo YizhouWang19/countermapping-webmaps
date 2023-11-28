@@ -168,11 +168,11 @@ var map = new mapboxgl.Map({
 if (config.inset) {
  var insetMap = new mapboxgl.Map({
     container: 'mapInset', // container id
-    style: 'mapbox://styles/mapbox/light-v10', //hosted style id
+    style: '', //hosted style id
     center: config.chapters[0].location.center,
     // Hardcode above center value if you want insetMap to be static.
     zoom: 10, // starting zoom
-    hash: false,
+    hash: true,
     interactive: false,
     attributionControl: false,
     //Future: Once official mapbox-gl-js has globe view enabled,
