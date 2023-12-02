@@ -184,6 +184,17 @@ a, a:hover, a:visited {
     text-align: justify;
 }
 
+#first-chapter2 h3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#first-chapter2 p{
+    font-size: 2vh;
+    text-align: justify;
+}
+
 #second-chapter h3 {
     font-size: 24px; /* Adjust the font size as needed */
     text-align: left;
@@ -246,6 +257,7 @@ a, a:hover, a:visited {
     text-align: justify;
 }
 
+
 #fourth-chapter {
     background-color: white; /* White background for the interlude */
     color: black; /* Black font color for the text in the interlude */
@@ -261,6 +273,17 @@ a, a:hover, a:visited {
 }
 
 #fourth-chapter p{
+    font-size: 2vh;
+    text-align: justify;
+}
+
+#fourth-chapter4 h3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#fourth-chapter4 p{
     font-size: 2vh;
     text-align: justify;
 }

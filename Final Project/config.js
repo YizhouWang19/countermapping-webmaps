@@ -33,17 +33,55 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                 layer: 'pluto-hous-type-master-featu-7b5u7f',
+                 layer: 'environmental-justice-area-ce-3h3z3b',
                   opacity: 0,
-                 }
+                 },
+                 {
+                    layer: '80mbuffer-cm3rrw',
+                     opacity: 0,
+                    },
+                    {
+                        layer: '800mbufferclip-774xl2',
+                         opacity: 0,
+                        },
+                        {
+                            layer: 'highline-bel7fl',
+                             opacity: 0,
+                            },
+                 {
+                    layer: 'brooklynprice-0qj9g6',
+                    opacity: 0,
+                }
+                 
             ],
             onChapterExit: [
                 {
-                     layer: 'pluto-hous-type-master-featu-7b5u7f',
+                     layer: 'environmental-justice-area-ce-3h3z3b',
                      opacity: 1,
                 }
             ]
         },
+
+        {
+            id: 'first-chapter2',
+            alignment: 'left',
+            hidden: false,
+            title: 'Does the allocation of the parks links to the green justice?',
+            image:'images/31.png',
+            description: 'According to Mayor &apos; s office of Climate & Environmental Justice, New York City &apos; environmental justice law defines “Environmental Justice Areas” as low-income or minority communities located in the City of New York, based on US Census data. Many Environmental Justice area is facing the lack of access of new green areas. For example, the coastal area is gentrifying as climate resilience projects are expensive and may be lack of access to the low-income communities or a minority communities (Gould & Lewis, 2018). Now, New York City is taking measures to promote the lives in the Environmental Justice areas. Therefore, the inequity created by the environmental changes, including park establishment, is essential to study.',
+            location: {
+                center: [-73.98082, 40.74661],
+                zoom: 11,
+                pitch: 60,
+                bearing: 0,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
         {
             id: 'second-chapter',
             alignment: 'right',
@@ -52,10 +90,10 @@ var config = {
             image: 'images/21.png',
             description: 'Jamaica, Queens:  The average home value is $624,665.   <br>   <br>  In the Jamaican community, the lack of green infrastructure and parks can be life-threatening during the hot weather, as the streets in these areas tend to absorb heat. ',
             location: {
-                center: [ -73.79934038572192,40.703726182054915,],
+                center: [ -73.790045038572310,40.705726182054915],
                 zoom: 15,
-                pitch: 60,
-                bearing: 40,
+                pitch: 30,
+                bearing: 0,
                 // flyTo additional controls-
                 // These options control the flight curve, making it move
                 // slowly and zoom out almost completely before starting
@@ -66,7 +104,10 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [{
+                layer: 'environmental-justice-area-ce-3h3z3b',
+                 opacity: 0,
+                }],
             onChapterExit: []
         },
 
@@ -78,8 +119,8 @@ var config = {
             image: 'images/22.png',
             description: 'Jamaica Estates:  The average home value is $1,030,645 <br>   <br>  However, in the nearby Jamaica Estates, sidewalks are lined with grass and trees, and the community is adjacent to Cunningham Park, a large public park. At the same time, it is worth noting that the housing prices in this area are approximately double those in the Jamaica community. ',
             location: {
-                center: [ -73.78433300722565, 40.718007262974616,],
-                zoom: 15,
+                center: [ -73.78433300722565, 40.725007262974616,],
+                zoom: 14,
                 pitch: 60,
                 bearing: 40,
                 // flyTo additional controls-
@@ -140,6 +181,32 @@ var config = {
     onChapterExit: []
 },
 
+{
+    id: 'third-chapter3',
+    alignment: 'left',
+    hidden: false,
+    title: 'Case Study I: The History of the High Line Park',
+    image: 'images/41.png',
+    description: 'The High Line, a former freight track with a troubled past, faced demolition before being transferred into a park.  Originally, it was an unsafe street-level tracks for the New York Central Railroad in the mid-1800s. The West Side Improvement project in 1924 aimed to eliminate street-level crossings, resulting in the creation of the elevated rail line known as the High Line. It was mainly used to transported goods and passed through buildings.    Train usage declined in the 1960s-1980s, leading to section demolitions. Calls for complete demolition followed, but in 1983, efforts to repurpose the structure began. However, in 1990s, despite being considered an eyesore, a hidden garden of wild plants thrived. Friends of the High Line, founded in 1999 by Joshua David and Robert Hammond, advocated for its preservation. This non-profit maintains and operates the High Line, turning it from an abandoned railway into a globally admired park inspiring the adaptive reuse of urban spaces.High Line (2023).',
+    location: {
+      center: [-74.00923584430823, 40.745804736880755],
+      zoom: 15,
+      pitch: 56,
+      bearing: 30,
+      speed: .5, // make the flying slow
+      curve: 1, // change the speed at which it zooms out
+    },
+    mapAnimation: 'flyTo',
+    rotateAnimation: false,
+    callback: '',
+    onChapterEnter: [
+        {
+            layer: 'housing',
+            opacity: 0,
+            duration: 10
+        }],
+    onChapterExit: []
+},
 
         {
             id: 'third-chapter2',
@@ -147,7 +214,7 @@ var config = {
             hidden: false,
             title: 'Case Study I: High Line Park',
             image: 'images/hl2.png',
-            description: 'The significant increase in real estate value caused by the high line confirms the impact of parks on real estate prices. The increase in value of houses within 80 meters of the park after 1000 days of establishment is much higher than those within 80-800 meters of the park. This gentrification will lead to only the wealthy being able to afford green spaces after the establishment of parks, while the poor continue to be displaced and bear the burden of environmental issues (Black&Richards, 2020).',
+            description: 'The significant increase in real estate value caused by the high line confirms the impact of parks on real estate prices. The increase in value of houses within 80 meters of the park after 1000 days of establishment is much higher than those within 80-800 meters of the park. This gentrification will lead to only the wealthy being able to afford green spaces after the establishment of parks, while the poor continue to be displaced and bear the burden of environmental issues (Black & Richards, 2020).',
             location: {
               center: [-74.00423584430823, 40.749804736880755],
               zoom: 17,
@@ -161,12 +228,72 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'housing',
-                    opacity: 0,
-                    duration: 10
+                 layer: 'park-bqz8ql',
+                  opacity: 0,
+                 },
+                ],
+            onChapterExit: []
+        },
+
+        {
+            id: 'third-chapter4',
+            alignment: 'right',
+            hidden: false,
+            title: 'Case Study I: High Line Park',
+            image: 'images/71.png',
+            description: 'The significant increase in real estate value caused by the high line confirms the impact of parks on real estate prices. The housing transaction data also proved that the housing near the High Line is experiencing a more rapid price growth (Black & Richards, 2020)',
+            location: {
+              center: [-74.00323584430823, 40.745804736880755],
+              zoom: 14.5,
+              pitch: 0,
+              bearing: 20,
+              speed: .5, // make the flying slow
+              curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    
+                        layer: '80mbuffer-cm3rrw',
+                         opacity: 0.4,
+                        },
+                        {
+                            layer: '800mbufferclip-774xl2',
+                             opacity: 0.4,
+                            },
+                            {
+                                layer: 'highline-bel7fl',
+                                 opacity: 0.4,
+                                },
+                     {
+                        layer: 'brooklynprice-0qj9g6',
+                        opacity: 0.4,
+                    
                 }],
             onChapterExit: []
         },
+
+        {
+            id: 'fourth-chapter3',
+            alignment: 'left',
+            hidden: false,
+            title: 'Case Study II:Gentrification in the Waterfront of Brooklyn',
+            description: 'This is a comparison of housing price change of the waterfront communities with new waterfront green ways and parks, and inner Brooklyn communities from 2012 to 2017 in Brooklyn represented by Sunset Park and similar communities in Brooklyn. The waterfront communities has experienced a much larger housing price change than inner Brooklyn communities .',
+            location: {
+                center: [ -74.02015596386975,40.65356564960238],
+                zoom: 11.5,
+                pitch: 0,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        }, 
+
+        
 
         {
             id: 'fourth-chapter',
@@ -184,7 +311,11 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: true,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [ {
+                layer: 'brooklynprice-0qj9g6',
+                opacity: 0,
+            
+        }],
             onChapterExit: []
         } ,
 
@@ -209,22 +340,46 @@ var config = {
         }, 
 
         {
-            id: 'fourth-chapter3',
-            alignment: 'left',
+            id: 'fourth-chapter4',
+            alignment: 'middle',
             hidden: false,
-            title: 'Case Study II: Bush Terminal Park in Sunset Park',
-            description: 'This is a comparison of housing price change of the waterfront communities with new waterfront green ways and parks from 2012 to 2017 in Brooklyn represented by Sunset Park and similar communities in Brooklyn. The waterfront communities has experienced a much larger housing price change than inner Brooklyn communities.',
+            title: 'Case Study III: Gowanus Canal Sponge Park of Gowanus',
+            image: 'images/61.png',
+            description: 'The Gowanus Canal was once surrounded by light industries and low to medium income residents, resulting in severe pollution of the canal, factories dumped toxic waste, polluted runoff, and raw sewage directly into the water However, as the waterfront landscape has been improved by the park, the area has transformed into "Brooklyn Venice". However, this has led to an increase in housing prices in the region, and well-educated middle-class communities have begun to replace the previous working class Latin American communities (Gould&Lewis, 2018).',
             location: {
-                center: [ -74.02015596386975,40.65356564960238],
-                zoom: 12,
-                pitch: 20,
+                center: [ -73.99158195821101, 40.67611236908911],
+                zoom: 15,
+                pitch: 45,
+                bearing: -20
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
         }, 
+  
+
+        {
+            id: 'fourth-chapter5',
+            alignment: 'left',
+            hidden: false,
+            title: 'Case Study III: Gowanus Canal Sponge Park of Gowanus',
+            image: 'images/51.png',
+            description: 'Poor and people of color residents typically reside near industrial waterfront areas, which are considered environmentally harmful and have low real estate value. As these industrial waterfront areas are transformed into waterfront landscapes and pocket parks, the real estate value increases, leading to an increase in housing costs. Residents who cannot keep up with the rising cost of living are forced to leave their communities',
+            location: {
+                center: [-73.98965349377936,40.676964665118604],
+                zoom: 17,
+                pitch: 45,
+                bearing: -20
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        }, 
+  
 
 
         
@@ -235,7 +390,7 @@ var config = {
             title: 'Conclusion: Strategies for a More Inclusive Park Establishment and Green Growth',
             description: 'New York planners face the crucial challenge of enhancing living standards without perpetuating social injustice through green gentrification. Proposed strategies include a two-stage approach. In Stage One, fostering community engagement is vital, with city authorities collaborating closely with locals to comprehend needs and concerns. Simultaneously, green spaces should be constructed based on traditional standards derived from community input. Moving to Stage Two, protective measures for housing must be implemented, stabilizing the affordable housing market amid green projects. Tailored policies in this phase cater to the unique needs of each community. An integrated approach emphasizes ongoing community involvement and active participation in green space development to counter gentrification, ensuring a healthy, affordable living environment for low-income residents. <br>   <br>   Reference:',
             location: {
-                center: [-74.02015596386975,40.65356564960238],
+                center: [-74.01015596386975,40.65356564960238],
                 zoom: 13,
                 pitch: 45,
                 bearing: -20
