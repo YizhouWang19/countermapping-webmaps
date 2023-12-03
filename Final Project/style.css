@@ -300,9 +300,32 @@ a, a:hover, a:visited {
     font-size: 24px; /* Adjust the font size as needed */
     text-align: center;
     margin-bottom: 10px;
+    height: 100vh; /* Increase header height to 170% of viewport */
 }
 
 #fifth-chapter p{
+    font-size: 2vh;
+    text-align: justify;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#fifth-chapter2 {
+    background-color: white; /* White background for the interlude */
+    color: black; /* Black font color for the text in the interlude */
+    width: 100vw;
+    height: 20vh; /* Increase header height to 170% of viewport */
+    margin-bottom: 160px; 
+}
+
+#fifth-chapter2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    text-align: center;
+    margin-bottom: 10px;
+    height: 10vh; /* Increase header height to 170% of viewport */
+}
+
+#fifth-chapter2 p{
     font-size: 2vh;
     text-align: justify;
     margin-left: 25vw;
