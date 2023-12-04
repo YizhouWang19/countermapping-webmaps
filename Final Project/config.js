@@ -380,6 +380,24 @@ var config = {
             onChapterExit: []
         }, 
   
+        {
+            id: 'fifth-chapter3',
+            alignment: 'center',
+            hidden: false,
+            title: 'Challenge Faced and Opportunities for Improvement',
+            description: 'Getting most updated park data <br>   <br> Coding and formatting <br>   <br> Link the social-economic status to actual park construction without other influences is hard <br>   <br> Creating a more through housing price comparison of the whole New York with and without new park construction <br>   <br> More case studies in different kinds of communities in Manhattan and Bronx <br>   <br>  Improvement for mobile site ',
+            location: {
+                center: [-74.01015596386975,40.65356564960238],
+                zoom: 13,
+                pitch: 45,
+                bearing: -20
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
 
 
         
@@ -402,6 +420,7 @@ var config = {
             onChapterExit: []
         }, 
 
+    
         {
             id: 'fifth-chapter2',
             alignment: 'center',

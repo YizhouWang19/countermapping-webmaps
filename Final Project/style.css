@@ -288,6 +288,17 @@ a, a:hover, a:visited {
     text-align: justify;
 }
 
+#fifth-chapter3 h3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#fifth-chapter3  p{
+    font-size: 2vh;
+    text-align: justify;
+}
+
 #fifth-chapter {
     background-color: white; /* White background for the interlude */
     color: black; /* Black font color for the text in the interlude */
