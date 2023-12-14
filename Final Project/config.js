@@ -72,15 +72,11 @@ var config = {
             image:'images/31.png',
             description: 'According to Mayor &apos; s office of Climate & Environmental Justice (2023), New York City &apos; environmental justice law defines “Environmental Justice Areas” (Shown as Yellow) as low-income or minority communities located in the City of New York, based on US Census data. Many Environmental Justice area is facing the lack of access of new green areas. For example, the coastal area is gentrifying as climate resilience projects are expensive and may be lack of access to the low-income communities or a minority communities (Gould & Lewis, 2018). Now, New York City is taking measures to promote the lives in the Environmental Justice areas. Therefore, the inequity created by the environmental changes, including park establishment, is essential to study.',
             location: {
-                center: [-73.98082, 40.74661],
-                zoom: 11,
-                pitch: 60,
+                center: [-74.02082, 40.67661],
+                zoom: 11.5,
+                pitch: 50,
                 bearing: 0,
             },
-            legend: [
-                { label: 'Legend Item 1', color: '#ff0000' },
-                { label: 'Legend Item 2', color: '#00ff00' },
-            ],
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
