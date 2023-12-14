@@ -99,6 +99,22 @@ config.chapters.forEach((record, idx) => {
         chapter.appendChild(story);
     }
 
+    if (record.legend) {
+        var legend = document.createElement('div');
+        legend.className = 'legend';
+        legend.innerHTML = '<h4>Legend</h4>';
+
+        // Add individual squares with color
+        record.legend.forEach(item => {
+            var legendItem = document.createElement('div');
+            legendItem.className = 'legend-item';
+            legendItem.innerHTML = '<span class="legend-color" style="background-color:' + item.color + '"></span>' + item.label;
+            legend.appendChild(legendItem);
+        });
+
+        chapter.appendChild(legend);
+    }
+
     if (record.video) {
         var videoDiv = document.createElement('div');
         videoDiv.setAttribute('class', 'videoContainer');

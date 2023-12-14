@@ -58,8 +58,10 @@ var config = {
                 {
                      layer: 'environmental-justice-area-ce-3h3z3b',
                      opacity: 1,
-                }
-            ]
+                },
+                   
+            ],
+
         },
 
         {
@@ -68,13 +70,17 @@ var config = {
             hidden: false,
             title: 'Does the allocation of the parks links to the green justice?',
             image:'images/31.png',
-            description: 'According to Mayor &apos; s office of Climate & Environmental Justice (2023), New York City &apos; environmental justice law defines “Environmental Justice Areas” as low-income or minority communities located in the City of New York, based on US Census data. Many Environmental Justice area is facing the lack of access of new green areas. For example, the coastal area is gentrifying as climate resilience projects are expensive and may be lack of access to the low-income communities or a minority communities (Gould & Lewis, 2018). Now, New York City is taking measures to promote the lives in the Environmental Justice areas. Therefore, the inequity created by the environmental changes, including park establishment, is essential to study.',
+            description: 'According to Mayor &apos; s office of Climate & Environmental Justice (2023), New York City &apos; environmental justice law defines “Environmental Justice Areas” (Shown as Yellow) as low-income or minority communities located in the City of New York, based on US Census data. Many Environmental Justice area is facing the lack of access of new green areas. For example, the coastal area is gentrifying as climate resilience projects are expensive and may be lack of access to the low-income communities or a minority communities (Gould & Lewis, 2018). Now, New York City is taking measures to promote the lives in the Environmental Justice areas. Therefore, the inequity created by the environmental changes, including park establishment, is essential to study.',
             location: {
                 center: [-73.98082, 40.74661],
                 zoom: 11,
                 pitch: 60,
                 bearing: 0,
             },
+            legend: [
+                { label: 'Legend Item 1', color: '#ff0000' },
+                { label: 'Legend Item 2', color: '#00ff00' },
+            ],
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
@@ -241,7 +247,7 @@ var config = {
             hidden: false,
             title: 'Case Study I: High Line Park',
             image: 'images/71.png',
-            description: 'The significant increase in real estate value caused by the high line confirms the impact of parks on real estate prices. The housing transaction data also proved that the housing near the High Line is experiencing a more rapid price growth (Black & Richards, 2020)',
+            description: 'The increase in value of houses within 80 meters (the red buffer) of the park after 1000 days of establishment is much higher than those within 80-800 meters (blue) of the park. The significant increase in real estate value caused by the high line confirms the impact of parks on real estate prices. The housing transaction data also proved that the housing near the High Line is experiencing a more rapid price growth (Black & Richards, 2020)',
             location: {
               center: [-74.00323584430823, 40.745804736880755],
               zoom: 14.5,
@@ -269,9 +275,13 @@ var config = {
                                 },
                      {
                         layer: 'brooklynprice-0qj9g6',
-                        opacity: 0.4,
-                    
-                }],
+                        opacity: 0.73,
+                     },
+
+                {
+                    layer: 'park-bqz8ql',
+                     opacity: 0.7,
+                    },],
             onChapterExit: []
         },
 
@@ -280,7 +290,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Case Study II:Gentrification in the Waterfront of Brooklyn',
-            description: 'This is a comparison of housing price change of the waterfront communities with new waterfront green ways and parks, and inner Brooklyn communities from 2012 to 2017 in Brooklyn represented by Sunset Park and similar communities in Brooklyn. The waterfront communities has experienced a much larger housing price change than inner Brooklyn communities .',
+            description: ' From 2012 to now, there are various waterfront parks established in Brooklyn. For example, the Brooklyn Bridge Park Piers in Dumbo and Red Hook, Gowanus Canal Sponge Park in Gowanus, and Bush Terminal Park in Sunset Park.  The choropleth map depicting housing price changes reveals a distinct trend. Shades of red on the map indicate a more pronounced increase in housing costs. We can see that these waterfront communities with new waterfront green ways and parks from 2012 to 2017 mentioned are expriencing higher housing price change. </p><img src="images/9.png" style="width: 50%; height: auto; display: block; margin: 20px ;" /> ',
             location: {
                 center: [ -74.02015596386975,40.65356564960238],
                 zoom: 11.5,
@@ -290,7 +300,8 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
-            onChapterExit: []
+            onChapterExit: [],
+            
         }, 
 
         
@@ -366,7 +377,7 @@ var config = {
             hidden: false,
             title: 'Case Study III: Gowanus Canal Sponge Park of Gowanus',
             image: 'images/51.png',
-            description: 'Poor and people of color residents typically reside near industrial waterfront areas, which are considered environmentally harmful and have low real estate value. As these industrial waterfront areas are transformed into waterfront landscapes and pocket parks, the real estate value increases, leading to an increase in housing costs. Residents who cannot keep up with the rising cost of living are forced to leave their communities  (Gould & Lewis, 2018).',
+            description: 'The housing price of Gowanus is going up much faster than the borough avearge after the park is established. Poor and people of color residents typically reside near industrial waterfront areas, which are considered environmentally harmful and have low real estate value. As these industrial waterfront areas are transformed into waterfront landscapes and pocket parks, the real estate value increases, leading to an increase in housing costs. Residents who cannot keep up with the rising cost of living are forced to leave their communities  (Gould & Lewis, 2018).',
             location: {
                 center: [-73.98965349377936,40.676964665118604],
                 zoom: 17,

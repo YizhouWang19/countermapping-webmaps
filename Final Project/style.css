@@ -8,6 +8,28 @@ a, a:hover, a:visited {
     color: #0071bc;
 }
 
+.legend {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.legend-item {
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
 #header {
     margin: auto;
     width: 100%;
